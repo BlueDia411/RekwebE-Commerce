@@ -22,14 +22,14 @@
 <body>
     <nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container ">
-            <a class="navbar-brand" href="<?= base_url(); ?>">BECAUSEØMAT</a>
+            <a class="navbar-brand" href="<?= base_url(); ?>home_login">BECAUSEØMAT</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse pb-sm-0" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link mr-3 " href="<?= base_url(); ?>">Home</a>
-                    <a class="nav-item nav-link mr-3" href="<?= base_url(); ?>shop">Shop</a>
+                    <a class="nav-item nav-link mr-3 " href="<?= base_url(); ?>home_login">Home</a>
+                    <a class="nav-item nav-link mr-3" href="<?= base_url(); ?>shop_login">Shop</a>
                     <a class="nav-item nav-link mr-3" href="<?= base_url(); ?>service">Customer Service</a>
                 </div>
             </div>

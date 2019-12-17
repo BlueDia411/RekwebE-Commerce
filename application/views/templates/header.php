@@ -38,6 +38,7 @@
           <h4><i class="fas fa-shopping-cart"></i></h4>
         </a>
       </div>
+
       <div class="dropdown mr-5">
         <a class=" text-decoration-none text-light p-2" href="#" id="dropdownMenuLink" data-toggle="dropdown">
           <h4><i class="far fa-user-circle"></i></h4>

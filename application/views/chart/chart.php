@@ -42,7 +42,7 @@
         <td><strong>Jumlah</strong></td>
         <td>Rp. 9000</td>
         <td></td>
-        <td><a class="btn btn-success " href="<?= base_url(); ?>checkout">Checkout</a></td>
+        <td><a class="btn btn-success " href="<?= base_url('chart/checkout'); ?>">Checkout</a></td>
       </tr>
     </tbody>
   </table>

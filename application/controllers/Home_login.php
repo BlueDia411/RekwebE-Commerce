@@ -12,7 +12,7 @@ class Home_login extends CI_Controller
         $data['nama'] = $nama;
         $data['barang'] = $this->Home_model->getAllBarang();
         $this->load->view('templates/header_login', $data);
-        $this->load->view('home/index', $data);
+        $this->load->view('home/index_login', $data);
         $this->load->view('templates/footer');
     }
 
@@ -21,7 +21,7 @@ class Home_login extends CI_Controller
         $data['judul'] = 'Detail Barang';
         $data['barang'] = $this->Home_model->getBarangById($id);
         $this->load->view('templates/header_login', $data);
-        $this->load->view('home/detail', $data);
+        $this->load->view('home/detail_login', $data);
         $this->load->view('templates/footer');
     }
 }
