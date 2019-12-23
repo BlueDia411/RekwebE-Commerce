@@ -12,11 +12,51 @@ class Auth extends CI_Controller{
 
     public function index($nama = '')
     {
-        $data['judul'] = 'Login';
-        $data['nama'] = $nama;
-        $this->load->view('templates/header', $data);
-        $this->load->view('auth/login');
-        $this->load->view('templates/footer');
+         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required');
+
+        if($this->form_validation->run() == false){
+            $data['judul'] = 'Login';
+            $data['nama'] = $nama;
+            $this->load->view('templates/header', $data);
+            $this->load->view('auth/login');
+            $this->load->view('templates/footer');
+        }else{
+            $this->_login();
+        }
+    }
+
+    private function _login()
+    {
+        $email = $this->input->post('email');
+        $password = $this->input->post('password');
+
+        $user = $this->User_model->search($email);
+
+        // user ada
+        if ($user) {
+            // cek aktivasi email ?
+            if ($user['is_active'] == 1) {
+                if(password_verify($password, $user['password'])){
+                    $data = [
+                        'email' => $user['email'],
+                        'role_id' => $user['role_id']
+                    ];
+                    $this->session->set_userdata($data);
+                    redirect('home');
+
+                }else{
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Your password wrong!</div>');
+                redirect('auth');
+                }
+            }else {
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">This email has not been activated!</div>');
+                redirect('auth');
+            }
+        }else{
+            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Email is not registered!</div>');
+            redirect('auth');
+        }
     }
 
     public function registrasi(){
@@ -39,7 +79,7 @@ class Auth extends CI_Controller{
        }else {
            $data = [
                 'name' => htmlspecialchars($this->input->post('name', true)),
-                'email' => htmlspecialchars('email'),
+                'email' => htmlspecialchars($this->input->post('email', true)),
                 'image' => 'default.jpg',
                 'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
                 'role_id' => 2,
@@ -47,8 +87,11 @@ class Auth extends CI_Controller{
                 'date_created' => time()
            ];
 
-           $this->User_model->insert($data);
-           redirect('home');
+        //    $this->User_model->insert($data);
+
+           $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Congratulation! your account has been created. Please activate your account</div>');
+           redirect('auth');
+
        } 
     }
 }
