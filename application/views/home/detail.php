@@ -12,6 +12,11 @@
                     <div class="quantity">
                         <input type="number" min="1" max="9" step="1" value="1">
                     </div>
+                    <!-- <div class="quantity buttons_added">
+                    <input type="button" value="-" class="minus">
+                    <input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+                    <input type="button" value="+" class="plus">
+                </div> -->
                     <button type="button" class="btn btn-primary marle">Tambah Keranjang</button>
                 </div>
                 <hr>
