@@ -34,7 +34,7 @@ class Barang extends CI_Controller
         $this->db->from('barang');
         $config['total_rows'] = $this->db->count_all_results();
         $data['total_rows'] = $config['total_rows'];
-        $config['per_pages'] = 3;
+        $config['per_pages'] = 10;
 
         // initialize
         $this->pagination->initialize($config);
@@ -114,6 +114,7 @@ class Barang extends CI_Controller
             $config['max_size'] = '3048';  //3MB max
             $config['max_width'] = '4480'; // pixel
             $config['max_height'] = '4480'; // pixel
+
             $config['file_name'] = $_FILES['gambar']['name'];
             $this->upload->initialize($config);
             if (!empty($_FILES['gambar']['name'])) {
@@ -124,11 +125,10 @@ class Barang extends CI_Controller
                         'gambar'        => $foto['file_name'],
                     );
                     unlink(FCPATH . "assets/images/" . $data->gambar);
-
-                    $this->Barang_model->ubahDataBarang($foto);
                 } else {
                     echo $this->upload->display_errors();
                 }
+                $this->Barang_model->ubahDataBarang($foto);
             }
             $this->session->set_flashdata('flash', 'Diubah');
             redirect('barang');

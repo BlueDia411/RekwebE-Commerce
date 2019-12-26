@@ -36,14 +36,20 @@ class Auth extends CI_Controller{
         // user ada
         if ($user) {
             // cek aktivasi email ?
-            if ($user['is_active'] == 1) {
+            if ($user['is_active'] == 1 ) {
+                //cek password
                 if(password_verify($password, $user['password'])){
                     $data = [
                         'email' => $user['email'],
                         'role_id' => $user['role_id']
                     ];
                     $this->session->set_userdata($data);
-                    redirect('home');
+                    if ($user['role_id'] == 1) {
+                        redirect('barang');
+                    } else {
+                        redirect('home');
+                    }
+                    
 
                 }else{
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Your password wrong!</div>');
@@ -83,15 +89,24 @@ class Auth extends CI_Controller{
                 'image' => 'default.jpg',
                 'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
                 'role_id' => 2,
-                'is_active' => 1,
+                'is_active' => 0,
                 'date_created' => time()
            ];
 
-        //    $this->User_model->insert($data);
+           $this->User_model->insert($data);
 
            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Congratulation! your account has been created. Please activate your account</div>');
            redirect('auth');
 
        } 
     }
+    
+    public function logout()
+        {
+            $this->session->unset_userdata('email');
+            $this->session->unset_userdata('role_id');
+    
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">You have been logged out!</div>');
+            redirect('auth');
+        }
 }

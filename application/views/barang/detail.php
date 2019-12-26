@@ -9,7 +9,7 @@
                 <div class="card-body">
                     <h5 class="card-title"><?= $barang['nama_barang']; ?></h5>
                     <h6 class="card-subtitle mb-2 text-muted">
-                        <img src="<?= base_url('assets/images/') ?><?= $barang['gambar'] ?>">
+                        <img src="<?= base_url('assets/images/') ?><?= $barang['gambar'] ?>" width="300px" height="300px">
                     </h6>
                     <p class="card-text">Tersisa <?= $barang['stok_barang']; ?> buah</p>
                     <p class="card-text">Rp. <?= $barang['harga_barang']; ?></p>
