@@ -97,7 +97,7 @@
       </div>
       <hr>
     </div>
-    <?= $this->session->userdata('email'); ?>
+
 
     <!-- Tampilan Daftar Barang -->
     <div class="container">
@@ -119,7 +119,8 @@
             <?php ++$i; ?>
           <?php endif; ?>
         <?php endforeach; ?>
-        >>>>>>> 8e145c7bf321fc4f2453f32ebfb198eb2ca4bcac
+        <!-- >>>>>>> 8e145c7bf321fc4f2453f32ebfb198eb2ca4bcac -->
       </div>
     </div>
 
+    <?= $this->session->userdata('email'); ?>
