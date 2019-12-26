@@ -6,6 +6,22 @@ class Barang_model extends CI_model
     {
         return $this->db->get('barang')->result_array();
     }
+
+    public function getBarang($limit, $start, $keyword = null)
+    {
+        if ($keyword) {
+            $this->db->like('nama_barang', $keyword);
+            $this->db->or_like('stok_barang', $keyword);
+            $this->db->or_like('harga_barang', $keyword);
+        }
+        return $this->db->get('barang', $limit, $start)->result_array();
+    }
+
+    public function countAllBarang()
+    {
+        return $this->db->get('barang')->num_rows();
+    }
+
     public function tambahDataBarang($foto)
     {
         $data = [
@@ -22,7 +38,7 @@ class Barang_model extends CI_model
 
     public function hapusDataBarang($id_barang)
     {
-        return $this->db->delete('barang', ['id_barang' => $id_barang]);
+        return $this->db->delete('barang', array('id_barang' => $id_barang));
     }
 
     public function getBarangById($id_barang)
@@ -33,6 +49,7 @@ class Barang_model extends CI_model
     public function ubahDataBarang($foto)
     {
         $data = [
+            "id_barang" => $this->input->post('id_barang', true),
             "nama_barang" => $this->input->post('nama_barang', true),
             "gambar"  => $foto['file_name'],
             "stok_barang" => $this->input->post('stok_barang', true),
@@ -40,9 +57,9 @@ class Barang_model extends CI_model
             "deskripsi" => $this->input->post('deskripsi', true),
             "spesifikasi" => $this->input->post('spesifikasi', true)
         ];
-
+        $this->db->set($data);
         $this->db->where('id_barang', $this->input->post('id_barang'));
-        $this->db->update('barang', $data);
+        $this->db->update('barang');
     }
 
     public function cariDataBarang()

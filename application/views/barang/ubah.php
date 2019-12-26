@@ -7,7 +7,7 @@
                     Form Ubah Data Barang
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url() ?>barang/ubah" method="post" enctype="multipart/form-data">
+                    <form action="<?= base_url() ?>barang/ubah/<?= $barang['id_barang']; ?>" method="post" enctype="multipart/form-data">
                         <input type="hidden" name="id_barang" value="<?= $barang['id_barang']; ?>">
                         <div class="form-group">
                             <label for="nama_barang">Nama barang</label>
