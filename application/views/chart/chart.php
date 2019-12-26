@@ -18,7 +18,7 @@
     <tbody id="detail_cart">
 </tbody>
 
-    <td><a class="btn btn-success " href="<?= base_url(); ?>cart/TambahTransaksi">Checkout</a></td>
+    <td><a class="btn btn-success " href="<?= base_url(); ?>cart/TambahTransaksi/">Checkout</a></td>
   </table>
 </div>
 
