@@ -12,7 +12,7 @@
         </div> -->
     <?php endif; ?>
 
-    <div class="row mt-3">
+    <div class="row mt-2">
         <div class="col-md-6">
             <a href="<?= base_url(); ?>barang/tambah" class="btn btn-primary">Tambah Data barang</a>
         </div>
@@ -59,7 +59,7 @@
                         <tr>
                             <th><?= ++$start; ?></th>
                             <td><?= $brg['nama_barang']; ?></td>
-                            <td>Tersisa <?= $brg['stok_barang']; ?> buah</td>
+                            <td><?= $brg['stok_barang']; ?> buah</td>
                             <td>Rp. <?= number_format($brg['harga_barang']); ?></td>
                             <td>
                                 <a href="<?= base_url(); ?>barang/detail/<?= $brg['id_barang']; ?>" class="badge badge-primary ">detail</a>

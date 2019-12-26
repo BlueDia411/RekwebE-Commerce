@@ -7,12 +7,17 @@ class Barang extends CI_Controller
         parent::__construct();
         $this->load->model('Barang_model');
         $this->load->library('upload');
-        $this->load->library('pagination');
         $this->load->library('form_validation');
+        $this->load->library('pagination');
     }
     public function index()
     {
         $data['judul'] = 'Daftar Barang';
+
+        $data['barang'] = $this->Barang_model->getAllBarang();
+
+        // if ($this->input->post('keyword')) {
+        // }
 
         if ($this->input->post('submit')) {
             // $data['barang'] = $this->Barang_model->cariDataBarang();
@@ -29,8 +34,7 @@ class Barang extends CI_Controller
         $this->db->from('barang');
         $config['total_rows'] = $this->db->count_all_results();
         $data['total_rows'] = $config['total_rows'];
-        $config['per_pages'] = 8;
-
+        $config['per_pages'] = 3;
 
         // initialize
         $this->pagination->initialize($config);
@@ -119,7 +123,7 @@ class Barang extends CI_Controller
                     $data = array(
                         'gambar'        => $foto['file_name'],
                     );
-                    @unlink($path . $this->input->post('filelama'));
+                    unlink(FCPATH . "assets/images/" . $data->gambar);
 
                     $this->Barang_model->ubahDataBarang($foto);
                 } else {
