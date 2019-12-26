@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse pb-sm-0" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link mr-3 " href="<?= base_url('home_login'); ?>">Home</a>
-                    <a class="nav-item nav-link mr-3" href="<?= base_url('home_login/shop_login'); ?>">Shop</a>
+                    <a class="nav-item nav-link mr-3" href="<?= base_url('home_login/shop'); ?>">Shop</a>
                     <a class="nav-item nav-link mr-3" href="<?= base_url(); ?>service">Customer Service</a>
                 </div>
             </div>
