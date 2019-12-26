@@ -34,7 +34,7 @@ class Barang extends CI_Controller
         $this->db->from('barang');
         $config['total_rows'] = $this->db->count_all_results();
         $data['total_rows'] = $config['total_rows'];
-        $config['per_pages'] = 8;
+        $config['per_pages'] = 10;
 
         // initialize
         $this->pagination->initialize($config);
