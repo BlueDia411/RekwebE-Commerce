@@ -1,7 +1,7 @@
 <?php
 // config
 $config['base_url'] = 'http://localhost/RekwebE-Commerce/barang/index';
-$config['num_links'] = 2;
+$config['num_links'] = 5;
 
 // styling
 $config['full_tag_open'] = '<nav><ul class="pagination justify-content-center">';
