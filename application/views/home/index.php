@@ -1,5 +1,3 @@
-
-
 <div id="carouselExampleCaptions" class="carousel slide marto" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -45,81 +43,79 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-    <!-- Marketing Best Saller -->
-    <div class="container padto text-center">
-      <strong>HOT ITEMS</strong>
-      <div class="row autoplay">
+<!-- Marketing Best Saller -->
+<div class="container padto text-center">
+  <strong>HOT ITEMS</strong>
+  <div class="row autoplay">
 
-        <div class="col-lg-4">
-          <img src="<?= base_url(); ?>assets/images/Karambit.jpg" class="rounded img-thumbnail" alt="">
-          <div class="card-header">
-            <h5>Ruby Karambit</h5>
-          </div>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa aspernatur magnam nobis inventore unde quis harum fuga quasi officiis, beatae ducimus illo, laborum perferendis alias ipsa. Aliquam pariatur rerum officia.</p>
-          <p>
-            <a class="btn btn-info" href="<?= base_url(); ?>detail" role="button">View Detail</a>
-          </p>
-        </div>
-
-        <div class="col-lg-4">
-          <img src="<?= base_url(); ?>assets/images/Karambit-Case-Hardened.jpg" class="rounded img-thumbnail" alt="">
-          <div class="card-header">
-            <h5>Case Hardened Karambit</h5>
-          </div>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa aspernatur magnam nobis inventore unde quis harum fuga quasi officiis, beatae ducimus illo, laborum perferendis alias ipsa. Aliquam pariatur rerum officia.</p>
-          <p>
-            <a class="btn btn-info" href="<?= base_url('home/detail'); ?>" role="button">View Detail</a>
-          </p>
-        </div>
-
-        <div class="col-lg-4">
-          <img src="<?= base_url(); ?>assets/images/Karambit-Doppler-Blackpearl.jpg" class="rounded img-thumbnail" alt="">
-          <div class="card-header">
-            <h5>Doppler Blackpearl Karambit</h5>
-          </div>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa aspernatur magnam nobis inventore unde quis harum fuga quasi officiis, beatae ducimus illo, laborum perferendis alias ipsa. Aliquam pariatur rerum officia.</p>
-          <p>
-            <a class="btn btn-info" href="<?= base_url('home/detail'); ?>" role="button">View Detail</a>
-          </p>
-        </div>
-
-        <div class="col-lg-4">
-          <img src="<?= base_url(); ?>assets/images/Karambit-Gamma-Doppler.jpg" class="rounded img-thumbnail" alt="">
-          <div class="card-header">
-            <h5>Gamma Doppler Karambit</h5>
-          </div>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa aspernatur magnam nobis inventore unde quis harum fuga quasi officiis, beatae ducimus illo, laborum perferendis alias ipsa. Aliquam pariatur rerum officia.</p>
-          <p>
-            <a class="btn btn-info" href="<?= base_url('home/detail'); ?>" role="button">View Detail</a>
-          </p>
-        </div>
-
+    <div class="col-lg-4">
+      <img src="<?= base_url(); ?>assets/images/Karambit.jpg" class="rounded img-thumbnail" alt="">
+      <div class="card-header">
+        <h5>Ruby Karambit</h5>
       </div>
-      <hr>
-    </div>
-    <?= $this->session->userdata('email'); ?>
-
-    <!-- Tampilan Daftar Barang -->
-    <div class="container">
-      <strong>New Arrival</strong>
-      <div class="row row-cols-1 row-cols-md-3">
-
-        <?php $i = 0 ?>
-        <?php foreach ($barang as $brg) : ?>
-          <?php if ($i < 4) : ?>
-            <a href="<?= base_url(); ?>home/detail/<?= $brg['id_barang']; ?>" class="col mb-4">
-              <div class="card h-100">
-                <img src="assets/images/<?= $brg['gambar']; ?>" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title"><?= $brg['nama_barang']; ?></h5>
-                  <p class="card-text"><?= $brg['deskripsi'];  ?></p>
-                </div>
-              </div>
-            </a>
-            <?php ++$i; ?>
-          <?php endif; ?>
-        <?php endforeach; ?>
-        >>>>>>> 8e145c7bf321fc4f2453f32ebfb198eb2ca4bcac
-      </div>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa aspernatur magnam nobis inventore unde quis harum fuga quasi officiis, beatae ducimus illo, laborum perferendis alias ipsa. Aliquam pariatur rerum officia.</p>
+      <p>
+        <a class="btn btn-info" href="<?= base_url(); ?>detail" role="button">View Detail</a>
+      </p>
     </div>
 
+    <div class="col-lg-4">
+      <img src="<?= base_url(); ?>assets/images/Karambit-Case-Hardened.jpg" class="rounded img-thumbnail" alt="">
+      <div class="card-header">
+        <h5>Case Hardened Karambit</h5>
+      </div>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa aspernatur magnam nobis inventore unde quis harum fuga quasi officiis, beatae ducimus illo, laborum perferendis alias ipsa. Aliquam pariatur rerum officia.</p>
+      <p>
+        <a class="btn btn-info" href="<?= base_url('home/detail'); ?>" role="button">View Detail</a>
+      </p>
+    </div>
+
+    <div class="col-lg-4">
+      <img src="<?= base_url(); ?>assets/images/Karambit-Doppler-Blackpearl.jpg" class="rounded img-thumbnail" alt="">
+      <div class="card-header">
+        <h5>Doppler Blackpearl Karambit</h5>
+      </div>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa aspernatur magnam nobis inventore unde quis harum fuga quasi officiis, beatae ducimus illo, laborum perferendis alias ipsa. Aliquam pariatur rerum officia.</p>
+      <p>
+        <a class="btn btn-info" href="<?= base_url('home/detail'); ?>" role="button">View Detail</a>
+      </p>
+    </div>
+
+    <div class="col-lg-4">
+      <img src="<?= base_url(); ?>assets/images/Karambit-Gamma-Doppler.jpg" class="rounded img-thumbnail" alt="">
+      <div class="card-header">
+        <h5>Gamma Doppler Karambit</h5>
+      </div>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa aspernatur magnam nobis inventore unde quis harum fuga quasi officiis, beatae ducimus illo, laborum perferendis alias ipsa. Aliquam pariatur rerum officia.</p>
+      <p>
+        <a class="btn btn-info" href="<?= base_url('home/detail'); ?>" role="button">View Detail</a>
+      </p>
+    </div>
+
+  </div>
+  <hr>
+</div>
+<?= $this->session->userdata('email'); ?>
+
+<!-- Tampilan Daftar Barang -->
+<div class="container">
+  <strong>New Arrival</strong>
+  <div class="row row-cols-1 row-cols-md-3">
+
+    <?php $i = 0 ?>
+    <?php foreach ($barang as $brg) : ?>
+      <?php if ($i < 4) : ?>
+        <a href="<?= base_url(); ?>home/detail/<?= $brg['id_barang']; ?>" class="col mb-4">
+          <div class="card h-100">
+            <img src="assets/images/<?= $brg['gambar']; ?>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><?= $brg['nama_barang']; ?></h5>
+              <p class="card-text"><?= $brg['deskripsi'];  ?></p>
+            </div>
+          </div>
+        </a>
+        <?php ++$i; ?>
+      <?php endif; ?>
+    <?php endforeach; ?>
+  </div>
+</div>
