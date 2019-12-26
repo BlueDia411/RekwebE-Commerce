@@ -38,7 +38,7 @@ class Barang_model extends CI_model
 
     public function hapusDataBarang($id_barang)
     {
-        return $this->db->delete('barang', ['id_barang' => $id_barang]);
+        return $this->db->delete('barang', array('id_barang' => $id_barang));
     }
 
     public function getBarangById($id_barang)
