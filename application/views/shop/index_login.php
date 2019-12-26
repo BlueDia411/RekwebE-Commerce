@@ -18,7 +18,7 @@
 </div>
 <div class="row">
     <?php foreach ($barang as $brg) : ?>
-        <a href="<?= base_url(); ?>home_login/detail/<?= $brg['id_barang']; ?>" class="col-md-3 mb-4">
+        <a href="<?= base_url('home_login/detail/'); ?><?= $brg['id_barang']; ?>" class="col-md-3 mb-4">
             <div class="card h-100 shadow-sm">
                 <img src="assets/images/<?= $brg['gambar']; ?>" class="card-img-top" alt="...">
                 <div class="card-body">

@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
   <link rel="stylesheet" href="<?= base_url(); ?>assets/css/style.css">
@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="mr-5">
-        <a class="text-decoration-none text-light" href="<?= base_url(); ?>cart">
+        <a class="text-decoration-none text-light" href="<?= base_url(); ?>chart">
           <h4><i class="fas fa-shopping-cart"></i></h4>
         </a>
       </div>
@@ -44,7 +44,7 @@
           <h4><i class="far fa-user-circle"></i></h4>
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a href="<?= base_url('auth/index'); ?>" class="dropdown-item" >Login</a>
+          <a href="<?= base_url('auth/index'); ?>" class="dropdown-item">Login</a>
         </div>
       </div>
     </div>
