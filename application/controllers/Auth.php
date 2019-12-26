@@ -36,7 +36,7 @@ class Auth extends CI_Controller{
         // user ada
         if ($user) {
             // cek aktivasi email ?
-            if ($user['is_active'] == 1) {
+            if ($user['is_active'] == 1 ) {
                 //cek password
                 if(password_verify($password, $user['password'])){
                     $data = [
@@ -44,7 +44,12 @@ class Auth extends CI_Controller{
                         'role_id' => $user['role_id']
                     ];
                     $this->session->set_userdata($data);
-                    redirect('home');
+                    if ($user['role_id'] == 1) {
+                        redirect('barang');
+                    } else {
+                        redirect('home');
+                    }
+                    
 
                 }else{
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Your password wrong!</div>');
