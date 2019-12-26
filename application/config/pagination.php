@@ -1,6 +1,6 @@
 <?php
 // config
-$config['base_url'] = 'http://localhost/RekwebE-Commerce/barang/index';
+$config['base_url'] = 'http://localhost/CI-Ecommerce/RekwebE-Commerce/barang/index';
 $config['num_links'] = 2;
 
 // styling
