@@ -24,10 +24,14 @@
  <b>Kabupaten: </b><br>
  <b>Kode Pos: </b><br>
  <b>No. Handphone: </b><br>
+ <b>Email: </b><br><hr>
+
+ No resi akan dikirim melalui email, pada jam kerja. <br>
+ Jam Kerja Senin - Jumat (09.00 - 21.00)
 
 </p>
 
-<a href=""><button type="submit" class="btn btn-primary">Konfirmasi pesanan</button></a>
+<a href="https://api.whatsapp.com/send?phone=6282214827718"><button type="submit" class="btn btn-primary">Konfirmasi pesanan</button></a>
 </div>
 </div>
 </div>
