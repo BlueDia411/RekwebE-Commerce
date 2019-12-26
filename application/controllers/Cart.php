@@ -4,12 +4,12 @@ class Cart extends CI_Controller
     
     function __construct(){
 		parent::__construct();
-		$this->load->model('cart_model');
+		$this->load->model('Cart_model');
 	}
 
     public function index($nama = '')
     {
-        $data['data']=$this->cart_model->get_all_produk();
+        $data['data']=$this->Cart_model->get_all_produk();
         $data['judul'] = 'Detail Barang';
         $data['nama'] = $nama;
         $this->load->view('templates/header', $data);
@@ -41,7 +41,7 @@ class Cart extends CI_Controller
                         <td>'.$items['name'].'</td>
                         <td>'.number_format($items['price']).'</td>
                         <td>'.$items['qty'].'</td>
-                        <td>'.number_format($items['subtotal']).'</td>
+                        
                         <td><button type="button" id="'.$items['rowid'].'" class="hapus_cart btn btn-danger btn-xs">Batal</button></td>
                     </tr>
                 ';
@@ -68,6 +68,9 @@ class Cart extends CI_Controller
             echo $this->show_cart();
         }
 
-
+    public function tambahTransaksi(){
+        $this->Cart_model->tambahDataTransaksi();
+      
+    }
 }
 ?>

@@ -8,7 +8,7 @@
   <table class="table mt-11">
     <thead>
       <tr>
-        <th scope="col">Barang</th>
+        
         <th scope="col">Nama Barang</th>
         <th scope="col">Harga</th>
         <th scope="col">Jumlah</th>
@@ -18,7 +18,7 @@
     <tbody id="detail_cart">
 </tbody>
 
-    <td><a class="btn btn-success " href="<?= base_url(); ?>checkout">Checkout</a></td>
+    <td><a class="btn btn-success " href="<?= base_url(); ?>cart/TambahTransaksi">Checkout</a></td>
   </table>
 </div>
 
