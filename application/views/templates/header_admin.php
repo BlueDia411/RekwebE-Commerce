@@ -27,7 +27,11 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link" href="<?= base_url(); ?>barang">Barang</a>
-                    <a class="nav-item nav-link" href="#">About</a>
+<<<<<<< HEAD
+                    <a class="nav-item nav-link" href="<?= base_url(); ?>transaksi">transaksi</a>
+=======
+                    <a class="nav-item nav-link" href="<?= base_url(); ?>transaksi">Transaksi</a>
+>>>>>>> e177401a21502aef6249e48e43ebe6bd43d3604b
                 </div>
             </div>
         </div>

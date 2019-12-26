@@ -36,7 +36,7 @@
         <div class="col-md">
             <h5>Total Barang : <?= $total_rows; ?></h5>
             <table class="table">
-                <thead>
+                <thead class="table-dark">
                     <tr>
                         <th>#</th>
                         <th>Nama Barang</th>

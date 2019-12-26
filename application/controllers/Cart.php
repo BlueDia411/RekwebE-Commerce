@@ -72,5 +72,12 @@ class Cart extends CI_Controller
         $this->Cart_model->tambahDataTransaksi();
       
     }
+    // public function getTransaksiByKode($kode){
+
+    //     $data['data'] = $this->Cart_model->getTransaksiByKode($kode);
+        
+    // }
 }
+
+    
 ?>
