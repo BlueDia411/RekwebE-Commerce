@@ -1,43 +1,34 @@
 <div class="container">
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <h1 class="display-4">Checkout</h1>
+        <h1 class="display-4">Konfirmasi Pesanan</h1>
         <p class="lead">jika mengalami kesulitan silahkan hubungi customer service.</p>
     </div>
 </div>
-<h2>Konfirmasi Check Out</h2>
-<form class="form-horizontal">
-    <div class="form-group  has-success has-feedback">
-        <label class="control-label col-xs-3" for="inputEmail">Email:</label>
-        <div class="col-xs-9">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Email">
-        </div>
-    </div>
-    <div class="form-group  has-success has-feedback">
-        <label class="control-label col-xs-3" for="firstName">Nama :</label>
-        <div class="col-xs-9">
-            <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Lengkap">
-        </div>
-    </div>
-    <div class="form-group  has-success has-feedback">
-        <label class="control-label col-xs-3" for="lastName">Alamat:</label>
-        <div class="col-xs-9">
-            <input type="text" class="form-control" name="alamat" id="alamat" placeholder="Alamat">
-        </div>
-    </div>
-    <div class="form-group  has-success has-feedback">
-        <label class="control-label col-xs-3" for="phoneNumber">Telp:</label>
-        <div class="col-xs-9">
-            <input type="tel" class="form-control" name="telp" id="telp" placeholder="No Telp">
-        </div>
-    </div>
+<h2>Terimakasih telah berbelanja Produk Kami!</h2>
+<hr><br>
+<p>
+ Silahkan Transfer kepada Rekening dibawah ini:<br>
+ Senilai:<b></b> <br>
+ <b>BCA: 0017304005 / Michael Herda Setiawan</b><br>
+ <b>Mandiri: 1230017304005 / Michael Herda Setiawan </b><br><hr>
+ Jika Sudah Transfer dengan Nominal yang ditentukan silahkan kirim bukti transferan tersebut beserta Nama dan Alamat lengkap pada
+ tombol dibawah ini yang akan menghubungkan pada admin Whatsapp kami. <br>
+ dengan format: <br>
+ <br>
+ <b>Nama: </b><br>
+ <b>Alamat: </b><br>
+ <b>RT/RW: </b><br>
+ <b>Kelurahan: </b><br>
+ <b>Kecamatan: </b><br>
+ <b>Kabupaten: </b><br>
+ <b>Kode Pos: </b><br>
+ <b>No. Handphone: </b><br>
 
+</p>
 
-    <div class="form-group  has-success has-feedback">
-        <div class="col-xs-offset-3 col-xs-9">
-            <button type="submit" class="btn btn-primary">Proses Order</button>
-        </div>
-    </div>
-</form>
+<a href=""><button type="submit" class="btn btn-primary">Konfirmasi pesanan</button></a>
+</div>
+</div>
 </div>
 </div>
