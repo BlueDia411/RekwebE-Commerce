@@ -28,8 +28,8 @@
             </button>
             <div class="collapse navbar-collapse pb-sm-0" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link mr-3 " href="<?= base_url(); ?>home_login">Home</a>
-                    <a class="nav-item nav-link mr-3" href="<?= base_url(); ?>shop_login">Shop</a>
+                    <a class="nav-item nav-link mr-3 " href="<?= base_url('home_login'); ?>">Home</a>
+                    <a class="nav-item nav-link mr-3" href="<?= base_url('shop_login'); ?>">Shop</a>
                     <a class="nav-item nav-link mr-3" href="<?= base_url(); ?>service">Customer Service</a>
                 </div>
             </div>
@@ -47,12 +47,12 @@
                     <div class="card-header">
                         <img src="" alt="">
                         <strong>
-                            Nama Pelanggan
+                            <?= $user['name']; ?>
                         </strong>
                     </div>
                     <a href="<?= base_url(); ?>myaccount" class="dropdown-item" data-toggle="">My Account</a>
                     <a href="" class="dropdown-item" data-toggle="">Address Book</a>
-                    <a href="<?= base_url(); ?>" class="dropdown-item" data-toggle="">Logout</a>
+                    <a href="<?= base_url('auth/logout'); ?>" class="dropdown-item" data-toggle="">Logout</a>
                 </div>
             </div>
         </div>

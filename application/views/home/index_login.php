@@ -112,7 +112,7 @@
             <?php if ($i < 4) : ?>
                 <a href="<?= base_url(); ?>home/detail/<?= $brg['id_barang']; ?>" class="col mb-4">
                     <div class="card h-100">
-                        <img src="assets/images/<?= $brg['gambar']; ?>" class="card-img-top" alt="...">
+                        <img src="<?= base_url('assets/images/') ?><?= $brg['gambar']; ?>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"><?= $brg['nama_barang']; ?></h5>
                             <p class="card-text"><?= $brg['deskripsi'];  ?></p>
