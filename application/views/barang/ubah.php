@@ -16,7 +16,7 @@
                         </div>
                         <div class="form-group">
                             <label for="gambar">Gambar</label><br>
-                            <img src="<?= base_url('assets/images/') ?><?= $barang['gambar'] ?>">
+                            <img src="<?= base_url('assets/images/') ?><?= $barang['gambar'] ?>" width="300px" height="300px">
                             <input type="file" id="gambar" name="gambar">
                         </div>
                         <div class="form-group">
