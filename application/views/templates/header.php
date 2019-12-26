@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="mr-5">
-        <a class="text-decoration-none text-light" href="<?= base_url(); ?>chart">
+        <a class="text-decoration-none text-light" href="<?= base_url(); ?>cart">
           <h4><i class="fas fa-shopping-cart"></i></h4>
         </a>
       </div>
