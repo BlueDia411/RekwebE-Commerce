@@ -34,7 +34,13 @@
         </div>
       </div>
       <div class="mr-5">
-        <a class="text-decoration-none text-light" href="<?= base_url(); ?>cart">
+        <?php $link = 'auth';
+          if ($this->session->userdata('email')) {
+            $link = 'cart';
+          }
+        ?>
+        
+        <a class="text-decoration-none text-light" href="<?= base_url($link); ?>">
           <h4><i class="fas fa-shopping-cart"></i></h4>
         </a>
       </div>
@@ -43,8 +49,29 @@
           <h4><i class="far fa-user-circle"></i></h4>
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a href="<?= base_url('auth/index'); ?>" class="dropdown-item" >Login</a>
-        </div>
+
+          <?php if($this->session->userdata('email')) : ?>
+            <div class="dropdown-divider"></div>
+             <a class="dropdown-item" href="#">
+            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+            My Profile
+        </a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="<?= base_url('auth/logout'); ?>" data-toggle="modal" data-target="#logoutModal">
+            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+            Logout
+        </a>
+            <?php else : ?>
+              <a href="<?= base_url('auth/index'); ?>" class="dropdown-item" >
+                <i class="fas fa-sign fa-sm fa-fw mr-2 text-gray-400"></i>
+                Login
+              </a>
+          <?php endif; ?>
       </div>
     </div>
   </nav>
+
+
+
+  
+                            
