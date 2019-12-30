@@ -9,14 +9,9 @@ class Transaksi extends CI_Controller{
     {
         $data['judul'] = 'Daftar Barang';
         $data['transaksi'] = $this->Transaksi_model->getAllTransaksi();
-        $this->load->view('templates/header', $data);
+        $this->load->view('templates/header_admin', $data);
         $this->load->view('transaksi/index', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('templates/footer_admin');
     }
 
 }
-
-
-
-
-?>

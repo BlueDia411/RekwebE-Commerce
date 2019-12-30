@@ -50,7 +50,7 @@
 
     <?php foreach ($barang as $brg) : ?>
       <div class="col-lg-4">
-        <img src="assets/images/<?= $brg['gambar'] ?>" class="rounded img-thumbnail" alt="">
+        <img src="assets/images/<?= $brg['gambar'] ?>" class="rounded img-thumbnail" width="300px" height="300px">
         <div class="card-header">
           <h5><?= $brg['nama_barang']; ?></h5>
         </div>
@@ -97,11 +97,11 @@
   </div>
   <hr>
 </div>
-<?= $this->session->userdata('email'); ?>
+<!-- <?= $this->session->userdata('email'); ?> -->
 
 <!-- Tampilan Daftar Barang -->
-<div class="container">
-  <strong>New Arrival</strong>
+<div class="container text-center">
+  <strong class="">New Arrival</strong>
   <div class="row row-cols-1 row-cols-md-3">
 
     <?php $i = 0 ?>
@@ -109,8 +109,8 @@
       <?php if ($i < 4) : ?>
         <a href="<?= base_url(); ?>home/detail/<?= $brg['id_barang']; ?>" class="col mb-4">
           <div class="card h-100">
-            <img src="assets/images/<?= $brg['gambar']; ?>" class="card-img-top" alt="...">
-            <div class="card-body">
+            <img src="assets/images/<?= $brg['gambar']; ?>" class="card-img-top" width="300px" height="250px">
+            <div class=" card-body">
               <h5 class="card-title"><?= $brg['nama_barang']; ?></h5>
               <p class="card-text"><?= $brg['deskripsi'];  ?></p>
             </div>
